@@ -1,0 +1,3 @@
+h = md5_bin(salt . pass)
+for i = 1 to 2047 { h = md5_bin(h . pass) }
+hex(h)

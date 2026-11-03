@@ -1,0 +1,10 @@
+project: savantenvs/hashcat
+target: fuzz_tokenizer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_tokenizer/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_tokenizer
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_tokenizer/fuzz_tokenizer.dict
+    timeout: 20

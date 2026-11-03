@@ -1,0 +1,10 @@
+project: savantenvs/hashcat
+target: fuzz_rule
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_rule/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_rule
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_rule/fuzz_rule.dict
+    timeout: 20

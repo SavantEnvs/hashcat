@@ -1,0 +1,10 @@
+project: savantenvs/hashcat
+target: fuzz_mask
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_mask/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_mask
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_mask/fuzz_mask.dict
+    timeout: 20

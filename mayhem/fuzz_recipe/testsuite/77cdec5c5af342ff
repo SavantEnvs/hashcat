@@ -1,0 +1,1 @@
+md5_b64(salt . salt2 . pepper . user . pass)

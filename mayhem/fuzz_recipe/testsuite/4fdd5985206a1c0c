@@ -1,0 +1,2 @@
+h = md5_bin(salt . pass)
+sha256(h . salt . h)
