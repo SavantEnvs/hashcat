@@ -1,0 +1,1 @@
+"{SSHA}" . base64(sha1_bin(pass . salt) . salt)

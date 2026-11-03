@@ -1,0 +1,10 @@
+project: savantenvs/hashcat
+target: fuzz_recipe
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_recipe/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_recipe
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_recipe/fuzz_recipe.dict
+    timeout: 20

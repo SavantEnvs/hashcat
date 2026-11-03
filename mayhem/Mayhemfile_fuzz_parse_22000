@@ -1,0 +1,10 @@
+project: savantenvs/hashcat
+target: fuzz_parse_22000
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_parse_22000/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_parse_22000
+    libfuzzer: true
+    dictionary: /mayhem/tools/fuzz/fuzz_parse.dict
+    timeout: 20
